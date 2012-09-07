@@ -13,7 +13,9 @@ int main() {
     ptr* r = cp(q);
     
     printf("p: %d\n", *(int*)Ptr(p));
+    (*(int*)Ptr(p))++;
     printf("q: %d\n", *(int*)Ptr(q));
+    (*(int*)Ptr(q))++;
     printf("r: %d\n", *(int*)Ptr(r));
     
     del(p);
