@@ -1,10 +1,6 @@
-//
-//  Ptr.h
-//  RefCount
-//
-//  Created by  on 9/7/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
-//
+// Copyright 2012 The Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
 #ifndef RefCount_Ptr_h
 #define RefCount_Ptr_h
