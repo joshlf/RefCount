@@ -6,7 +6,7 @@
 #include "Ptr.h"
 
 int main() {
-    int* i = malloc(sizeof(int));
+    int* i = malloc(sizeof(*i));
     *i = 5;
     ptr* p = new(i);
     ptr* q = cp(p);
