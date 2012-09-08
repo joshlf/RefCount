@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "Ptr.h"
 
 ptr* new(void* p) {
