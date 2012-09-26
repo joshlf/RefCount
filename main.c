@@ -9,9 +9,9 @@
 int main() {
     int* i = malloc(sizeof(*i));
     *i = 5;
-    ptr* p = new(i);
-    ptr* q = cp(p);
-    ptr* r = cp(q);
+    ptr p = new(i);
+    ptr q = cp(p);
+    ptr r = cp(q);
     
     printf("p: %d\n", *(int*)Ptr(p));
     (*(int*)Ptr(p))++;

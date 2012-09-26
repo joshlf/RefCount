@@ -6,19 +6,25 @@
 #include <stdlib.h>
 #include "Ptr.h"
 
-ptr* new(void* p) {
-    ptr* new = malloc(sizeof(ptr));
+struct ptr {
+    int ctr;
+    void *p;
+};
+
+
+ptr new(void *p) {
+    ptr new = malloc(sizeof(ptr));
     new->ctr = 1;
     new->p = p;
     return new;
 }
 
-ptr* cp(ptr* p) {
+ptr cp(ptr p) {
     p->ctr++;
     return p;
 }
 
-void del(ptr* p) {
+void del(ptr p) {
     if (p->ctr == 1) {
         free(p->p);
         free(p);
@@ -27,7 +33,7 @@ void del(ptr* p) {
     }
 }
 
-void delFunc(ptr* p, void (*f)(void*)) {
+void delFunc(ptr p, void (*f)(void*)) {
     if (p->ctr == 1) {
         f(p->p);
         free(p->p);
@@ -37,6 +43,6 @@ void delFunc(ptr* p, void (*f)(void*)) {
     }
 }
 
-void* Ptr(ptr* p) {
+void *Ptr(ptr p) {
     return p->p;
 }
